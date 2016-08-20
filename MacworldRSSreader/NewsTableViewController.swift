@@ -11,6 +11,13 @@ import UIKit
 class NewsTableViewController: UITableViewController {
   
   private var newsItems:[News]?
+  
+  let dateFormatter: NSDateFormatter = {
+    let formatter = NSDateFormatter()
+    formatter.dateStyle = .MediumStyle
+    formatter.timeStyle = .NoStyle
+    return formatter
+  }()
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -51,10 +58,13 @@ class NewsTableViewController: UITableViewController {
     
     let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! NewsTableViewCell
     
-    // Configure the cell...
+    // Configure the cell
     if let news = newsItems?[indexPath.row] {
       cell.titleLabel.text = news.title
-      cell.pubDateLabel.text = news.pubDate
+
+      if let date = news.pubDate {
+        cell.pubDateLabel.text = dateFormatter.stringFromDate(date)
+      }
       cell.authorLabel.text = news.author
       cell.descriptionLabel.text = news.description
     }
