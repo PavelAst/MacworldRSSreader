@@ -86,6 +86,12 @@ class FeedParser: NSObject, NSXMLParserDelegate {
       currentLink = ""
       currentThumbnailURL = ""
     }
+    
+    if elementName == "media:thumbnail" {
+      if let thumbnailURL = attributeDict["url"] {
+        currentThumbnailURL = thumbnailURL
+      }
+    }
   }
   
   func parser(parser: NSXMLParser, foundCharacters string: String) {
@@ -93,10 +99,8 @@ class FeedParser: NSObject, NSXMLParserDelegate {
     switch currentElement {
       case "title": currentTitle += string
       case "pubDate": currentPubDate += string
-      //case "description": currentDescription += string
       case "author": currentAuthor += string
       case "link": currentLink += string
-      case "media:thumbnail": currentThumbnailURL += string
       default: break
     }
   }
@@ -124,5 +128,5 @@ class FeedParser: NSObject, NSXMLParserDelegate {
   func parser(parser: NSXMLParser, parseErrorOccurred parseError: NSError) {
     print(parseError.localizedDescription)
   }
-
+  
 }

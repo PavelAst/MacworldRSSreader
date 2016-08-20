@@ -25,6 +25,8 @@ class NewsTableViewCell: UITableViewCell {
     return formatter
   }()
   
+  let sampleURL = "http://zapt3.staticworld.net/images/article/2016/08/wifi_security_cam-100677733-primary.idge.jpg"
+  
   override func awakeFromNib() {
     super.awakeFromNib()
     // Initialization code
@@ -44,6 +46,9 @@ class NewsTableViewCell: UITableViewCell {
     }
     authorLabel.text = news.author
     descriptionLabel.text = news.description
+    if let url = NSURL(string: news.thumbnailURL) {
+      downloadTask = thumbnail.loadImageWithURL(url)
+    }
   }
   
 }

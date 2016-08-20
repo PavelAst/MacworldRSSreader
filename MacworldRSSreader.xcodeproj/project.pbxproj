@@ -16,6 +16,7 @@
 		860C78E71D67B23000D864B6 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860C78E61D67B23000D864B6 /* NewsTableViewCell.swift */; };
 		860C78E91D67B3C900D864B6 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860C78E81D67B3C900D864B6 /* News.swift */; };
 		86116FC41D68378A0028A804 /* FeedParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86116FC31D68378A0028A804 /* FeedParser.swift */; };
+		8622B6091D6899A900BB4C23 /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8622B6081D6899A900BB4C23 /* UIImageView+DownloadImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		860C78E61D67B23000D864B6 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		860C78E81D67B3C900D864B6 /* News.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		86116FC31D68378A0028A804 /* FeedParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedParser.swift; sourceTree = "<group>"; };
+		8622B6081D6899A900BB4C23 /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				860C78E61D67B23000D864B6 /* NewsTableViewCell.swift */,
 				860C78E81D67B3C900D864B6 /* News.swift */,
 				86116FC31D68378A0028A804 /* FeedParser.swift */,
+				8622B6081D6899A900BB4C23 /* UIImageView+DownloadImage.swift */,
 				860C78D81D679DC000D864B6 /* Main.storyboard */,
 				860C78DB1D679DC000D864B6 /* Assets.xcassets */,
 				860C78DD1D679DC000D864B6 /* LaunchScreen.storyboard */,
@@ -148,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8622B6091D6899A900BB4C23 /* UIImageView+DownloadImage.swift in Sources */,
 				860C78D71D679DC000D864B6 /* NewsTableViewController.swift in Sources */,
 				860ABEFE1D6888FF0077E08A /* WebViewController.swift in Sources */,
 				860C78D51D679DC000D864B6 /* AppDelegate.swift in Sources */,
