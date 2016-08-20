@@ -9,64 +9,67 @@
         <scene sceneID="fc7-Fo-yoF">
             <objects>
                 <tableViewController id="Hod-wl-Pd9" customClass="NewsTableViewController" customModule="MacworldRSSreader" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="160" sectionHeaderHeight="28" sectionFooterHeight="28" id="zcI-ET-9qx">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="180" sectionHeaderHeight="28" sectionFooterHeight="28" id="zcI-ET-9qx">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="160" id="pui-J8-cKs" customClass="NewsTableViewCell" customModule="MacworldRSSreader" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="160"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="180" id="pui-J8-cKs" customClass="NewsTableViewCell" customModule="MacworldRSSreader" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="180"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pui-J8-cKs" id="in8-OR-Bqj">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="159"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="179"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t0S-oj-4wR">
-                                            <rect key="frame" x="8" y="8" width="584" height="33"/>
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Telepaint still holds up as a unique and addictive iOS puzzle game" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t0S-oj-4wR">
+                                            <rect key="frame" x="8" y="8" width="584" height="55"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="55" id="TfI-eq-Y10"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0G5-Uy-AuJ">
-                                            <rect key="frame" x="8" y="71" width="110" height="80"/>
+                                            <rect key="frame" x="8" y="79" width="110" height="80"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="110" id="mm6-IU-76S"/>
-                                                <constraint firstAttribute="height" constant="80" id="oFS-jb-PDC"/>
+                                                <constraint firstAttribute="height" constant="80" id="5eQ-XS-LdV"/>
+                                                <constraint firstAttribute="width" constant="110" id="cpc-Xf-Ek7"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tiC-yn-vPn">
-                                            <rect key="frame" x="8" y="49" width="25" height="14"/>
+                                            <rect key="frame" x="567" y="71" width="25" height="14"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xvu-a1-66S">
-                                            <rect key="frame" x="556" y="49" width="36" height="14"/>
+                                            <rect key="frame" x="523" y="71" width="36" height="14"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OTT-8c-pJI">
-                                            <rect key="frame" x="126" y="71" width="466" height="80"/>
+                                            <rect key="frame" x="126" y="90" width="466" height="81"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="t0S-oj-4wR" firstAttribute="leading" secondItem="in8-OR-Bqj" secondAttribute="leading" constant="8" id="6av-cZ-vZM"/>
-                                        <constraint firstItem="Xvu-a1-66S" firstAttribute="top" secondItem="t0S-oj-4wR" secondAttribute="bottom" constant="8" id="DCE-24-Rlc"/>
-                                        <constraint firstItem="t0S-oj-4wR" firstAttribute="top" secondItem="in8-OR-Bqj" secondAttribute="top" constant="8" id="Ihu-b1-mQx"/>
-                                        <constraint firstItem="OTT-8c-pJI" firstAttribute="leading" secondItem="0G5-Uy-AuJ" secondAttribute="trailing" constant="8" symbolic="YES" id="N9C-yf-NRe"/>
-                                        <constraint firstAttribute="trailing" secondItem="t0S-oj-4wR" secondAttribute="trailing" constant="8" id="NxU-Wj-D9J"/>
-                                        <constraint firstItem="0G5-Uy-AuJ" firstAttribute="top" secondItem="tiC-yn-vPn" secondAttribute="bottom" constant="8" id="O9B-fG-x7u"/>
-                                        <constraint firstItem="OTT-8c-pJI" firstAttribute="top" secondItem="0G5-Uy-AuJ" secondAttribute="top" id="RlO-eQ-uUq"/>
-                                        <constraint firstItem="0G5-Uy-AuJ" firstAttribute="leading" secondItem="in8-OR-Bqj" secondAttribute="leading" constant="8" id="XfP-XU-2Zj"/>
-                                        <constraint firstItem="OTT-8c-pJI" firstAttribute="trailing" secondItem="Xvu-a1-66S" secondAttribute="trailing" id="Znd-ZV-p5G"/>
-                                        <constraint firstItem="OTT-8c-pJI" firstAttribute="bottom" secondItem="0G5-Uy-AuJ" secondAttribute="bottom" id="br3-wp-dVu"/>
-                                        <constraint firstItem="tiC-yn-vPn" firstAttribute="leading" secondItem="in8-OR-Bqj" secondAttribute="leading" constant="8" id="e5C-0t-bDK"/>
-                                        <constraint firstItem="tiC-yn-vPn" firstAttribute="top" secondItem="t0S-oj-4wR" secondAttribute="bottom" constant="8" symbolic="YES" id="uuv-HC-2BA"/>
-                                        <constraint firstAttribute="trailing" secondItem="Xvu-a1-66S" secondAttribute="trailing" constant="8" id="vch-NC-gHs"/>
+                                        <constraint firstItem="0G5-Uy-AuJ" firstAttribute="leading" secondItem="in8-OR-Bqj" secondAttribute="leading" constant="8" id="0rd-Tk-Rlc"/>
+                                        <constraint firstItem="t0S-oj-4wR" firstAttribute="top" secondItem="in8-OR-Bqj" secondAttribute="top" constant="8" id="FAg-lh-7Y1"/>
+                                        <constraint firstItem="tiC-yn-vPn" firstAttribute="leading" secondItem="Xvu-a1-66S" secondAttribute="trailing" constant="8" id="QzU-54-k0A"/>
+                                        <constraint firstItem="Xvu-a1-66S" firstAttribute="centerY" secondItem="tiC-yn-vPn" secondAttribute="centerY" id="VaP-t7-VlF"/>
+                                        <constraint firstItem="tiC-yn-vPn" firstAttribute="top" secondItem="t0S-oj-4wR" secondAttribute="bottom" constant="8" id="WFj-vE-Xtx"/>
+                                        <constraint firstItem="OTT-8c-pJI" firstAttribute="leading" secondItem="0G5-Uy-AuJ" secondAttribute="trailing" constant="8" id="X2K-oI-OaP"/>
+                                        <constraint firstAttribute="trailing" secondItem="t0S-oj-4wR" secondAttribute="trailing" constant="8" id="a2R-Ae-A84"/>
+                                        <constraint firstItem="0G5-Uy-AuJ" firstAttribute="top" secondItem="t0S-oj-4wR" secondAttribute="bottom" constant="16" id="cf4-dk-tHI"/>
+                                        <constraint firstItem="t0S-oj-4wR" firstAttribute="leading" secondItem="in8-OR-Bqj" secondAttribute="leading" constant="8" id="eGG-aJ-YNn"/>
+                                        <constraint firstAttribute="bottom" secondItem="OTT-8c-pJI" secondAttribute="bottom" constant="8" id="gi3-WR-jOS"/>
+                                        <constraint firstItem="OTT-8c-pJI" firstAttribute="top" secondItem="Xvu-a1-66S" secondAttribute="bottom" constant="5" id="pSM-QH-aBh"/>
+                                        <constraint firstAttribute="trailing" secondItem="OTT-8c-pJI" secondAttribute="trailing" constant="8" id="tWq-JH-L7Q"/>
+                                        <constraint firstAttribute="trailing" secondItem="tiC-yn-vPn" secondAttribute="trailing" constant="8" id="wEG-Lz-IM8"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>

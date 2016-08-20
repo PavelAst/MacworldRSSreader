@@ -20,7 +20,6 @@ class NewsTableViewController: UITableViewController {
       (newsItems: [News]) -> Void in
       
       self.newsItems = newsItems
-      print(newsItems)
       NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
         self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: .None)
       })
@@ -53,9 +52,11 @@ class NewsTableViewController: UITableViewController {
     let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! NewsTableViewCell
     
     // Configure the cell...
-    if let item = newsItems?[indexPath.row] {
-      cell.titleLabel.text = item.title
-      cell.authorLabel.text = item.author
+    if let news = newsItems?[indexPath.row] {
+      cell.titleLabel.text = news.title
+      cell.pubDateLabel.text = news.pubDate
+      cell.authorLabel.text = news.author
+      cell.descriptionLabel.text = news.description
     }
     
     return cell
