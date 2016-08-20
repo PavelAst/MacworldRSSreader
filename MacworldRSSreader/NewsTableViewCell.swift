@@ -16,6 +16,15 @@ class NewsTableViewCell: UITableViewCell {
   @IBOutlet weak var descriptionLabel: UILabel!
   @IBOutlet weak var thumbnail: UIImageView!
   
+  var downloadTask: NSURLSessionDownloadTask?
+  
+  let dateFormatter: NSDateFormatter = {
+    let formatter = NSDateFormatter()
+    formatter.dateStyle = .MediumStyle
+    formatter.timeStyle = .NoStyle
+    return formatter
+  }()
+  
   override func awakeFromNib() {
     super.awakeFromNib()
     // Initialization code
@@ -25,6 +34,16 @@ class NewsTableViewCell: UITableViewCell {
     super.setSelected(selected, animated: animated)
     
     // Configure the view for the selected state
+  }
+  
+  func setForNews(news:News) {
+    titleLabel.text = news.title
+    
+    if let date = news.pubDate {
+      pubDateLabel.text = dateFormatter.stringFromDate(date)
+    }
+    authorLabel.text = news.author
+    descriptionLabel.text = news.description
   }
   
 }

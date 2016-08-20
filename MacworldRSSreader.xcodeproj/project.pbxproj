@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		860ABEFE1D6888FF0077E08A /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860ABEFD1D6888FF0077E08A /* WebViewController.swift */; };
 		860C78D51D679DC000D864B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860C78D41D679DC000D864B6 /* AppDelegate.swift */; };
 		860C78D71D679DC000D864B6 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860C78D61D679DC000D864B6 /* NewsTableViewController.swift */; };
 		860C78DA1D679DC000D864B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 860C78D81D679DC000D864B6 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		860ABEFD1D6888FF0077E08A /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		860C78D11D679DC000D864B6 /* MacworldRSSreader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacworldRSSreader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		860C78D41D679DC000D864B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		860C78D61D679DC000D864B6 /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			children = (
 				860C78D41D679DC000D864B6 /* AppDelegate.swift */,
 				860C78D61D679DC000D864B6 /* NewsTableViewController.swift */,
+				860ABEFD1D6888FF0077E08A /* WebViewController.swift */,
 				860C78E61D67B23000D864B6 /* NewsTableViewCell.swift */,
 				860C78E81D67B3C900D864B6 /* News.swift */,
 				86116FC31D68378A0028A804 /* FeedParser.swift */,
@@ -146,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				860C78D71D679DC000D864B6 /* NewsTableViewController.swift in Sources */,
+				860ABEFE1D6888FF0077E08A /* WebViewController.swift in Sources */,
 				860C78D51D679DC000D864B6 /* AppDelegate.swift in Sources */,
 				860C78E91D67B3C900D864B6 /* News.swift in Sources */,
 				860C78E71D67B23000D864B6 /* NewsTableViewCell.swift in Sources */,

@@ -12,13 +12,6 @@ class NewsTableViewController: UITableViewController {
   
   private var newsItems:[News]?
   
-  let dateFormatter: NSDateFormatter = {
-    let formatter = NSDateFormatter()
-    formatter.dateStyle = .MediumStyle
-    formatter.timeStyle = .NoStyle
-    return formatter
-  }()
-
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -32,13 +25,13 @@ class NewsTableViewController: UITableViewController {
       })
     })
   }
-
+  
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
   
-  // MARK: - Table view data source
+  // MARK: - UITableViewDataSource
   
   override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
     // Return the number of sections.
@@ -60,19 +53,21 @@ class NewsTableViewController: UITableViewController {
     
     // Configure the cell
     if let news = newsItems?[indexPath.row] {
-      cell.titleLabel.text = news.title
-
-      if let date = news.pubDate {
-        cell.pubDateLabel.text = dateFormatter.stringFromDate(date)
-      }
-      cell.authorLabel.text = news.author
-      cell.descriptionLabel.text = news.description
+      cell.setForNews(news)
     }
     
     return cell
   }
-
-
-
+  
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if segue.identifier == "ShowWebPage" {
+      if let row = tableView.indexPathForSelectedRow?.row, link = newsItems?[row].link {
+        let destinationController = segue.destinationViewController as! WebViewController
+        destinationController.linkURL = link
+      }
+    }
+  }
+  
+  
 }
 

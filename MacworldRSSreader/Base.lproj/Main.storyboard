@@ -9,7 +9,7 @@
         <scene sceneID="fc7-Fo-yoF">
             <objects>
                 <tableViewController id="Hod-wl-Pd9" customClass="NewsTableViewController" customModule="MacworldRSSreader" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="180" sectionHeaderHeight="28" sectionFooterHeight="28" id="zcI-ET-9qx">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="180" sectionHeaderHeight="28" sectionFooterHeight="28" id="zcI-ET-9qx">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -32,6 +32,7 @@
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0G5-Uy-AuJ">
                                             <rect key="frame" x="8" y="79" width="110" height="80"/>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="80" id="5eQ-XS-LdV"/>
                                                 <constraint firstAttribute="width" constant="110" id="cpc-Xf-Ek7"/>
@@ -78,6 +79,7 @@
                                     <outlet property="pubDateLabel" destination="tiC-yn-vPn" id="lEY-na-ce8"/>
                                     <outlet property="thumbnail" destination="0G5-Uy-AuJ" id="DQs-Sd-rL4"/>
                                     <outlet property="titleLabel" destination="t0S-oj-4wR" id="hbq-gI-CVM"/>
+                                    <segue destination="pPn-1i-Wyn" kind="show" identifier="ShowWebPage" id="d7y-1S-Vuc"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -91,6 +93,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kw7-AX-A23" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1207" y="582"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="CwZ-OT-UOe">
+            <objects>
+                <viewController id="pPn-1i-Wyn" customClass="WebViewController" customModule="MacworldRSSreader" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="l3K-fw-IRG"/>
+                        <viewControllerLayoutGuide type="bottom" id="CLw-px-mRW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cGf-aT-cA7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SDV-es-HFr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2008" y="582"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lVs-Kz-dmK">
