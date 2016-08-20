@@ -93,12 +93,17 @@ class FeedParser: NSObject, NSXMLParserDelegate {
     switch currentElement {
       case "title": currentTitle += string
       case "pubDate": currentPubDate += string
-      case "description": currentDescription += string
+      //case "description": currentDescription += string
       case "author": currentAuthor += string
       case "link": currentLink += string
       case "media:thumbnail": currentThumbnailURL += string
       default: break
     }
+  }
+  
+  func parser(parser: NSXMLParser, foundCDATA CDATABlock: NSData) {
+    let stringDescription = String(data: CDATABlock, encoding: NSUTF8StringEncoding)!
+    currentDescription = stringDescription.stringByReplacingOccurrencesOfString("<[^>]+>", withString: " ", options: .RegularExpressionSearch, range: nil)
   }
   
   func parser(parser: NSXMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
