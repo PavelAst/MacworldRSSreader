@@ -10,6 +10,9 @@ import UIKit
 
 class NewsTableViewController: UITableViewController {
   
+  let rssAllStoriesFeed = "http://www.macworld.com/index.rss"
+  let rssNewsFeed = "http://www.macworld.com/news/index.rss"
+  
   private var newsItems = [News]()
   
   var searchController:UISearchController!
@@ -30,7 +33,7 @@ class NewsTableViewController: UITableViewController {
     searchController.searchBar.tintColor = UIColor(red: 98.0/255.0, green: 196.0/255.0, blue: 255.0/255.0, alpha: 1.0)
     
     let feedParser = FeedParser()
-    feedParser.parseFeed("http://www.macworld.com/index.rss", completionHandler: {
+    feedParser.parseFeed(rssNewsFeed, completionHandler: {
       (newsItems: [News]) -> Void in
       
       self.newsItems = newsItems
